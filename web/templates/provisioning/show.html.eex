@@ -1,0 +1,17 @@
+<h2>Show provisioning</h2>
+
+<ul>
+
+  <li>
+    <strong>Key:</strong>
+    <%= @provisioning.key %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @provisioning.name %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: provisioning_path(@conn, :index) %>

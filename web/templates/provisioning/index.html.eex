@@ -1,0 +1,28 @@
+<h2>Listing provisionings</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for provisioning <- @provisionings do %>
+    <tr>
+      <td><%= provisioning.key %></td>
+      <td><%= provisioning.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: provisioning_path(@conn, :show, provisioning), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: provisioning_path(@conn, :edit, provisioning), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: provisioning_path(@conn, :delete, provisioning), method: :delete, class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New provisioning", to: provisioning_path(@conn, :new) %>

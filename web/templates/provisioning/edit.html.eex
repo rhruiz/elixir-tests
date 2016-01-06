@@ -1,0 +1,6 @@
+<h2>Edit provisioning</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: provisioning_path(@conn, :update, @provisioning) %>
+
+<%= link "Back", to: provisioning_path(@conn, :index) %>
